@@ -1,0 +1,27 @@
+* {
+    margin: 0 auto;
+}
+ul {
+    list-style-type: none; 
+}
+
+ul li {
+    margin: 10px 80px 10px -40px;
+    float: left;
+}
+
+div {
+    margin-top: 20px;
+}
+
+.skill {
+    clear: both;
+}
+
+.content {
+    margin-top: 10px;
+}
+
+.contact {
+    clear: both;
+}
