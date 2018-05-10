@@ -1,0 +1,50 @@
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+ul {
+    list-style-type: none; 
+}
+
+ul li {
+    margin: 10px 80px 10px -40px;
+    float: left;
+}
+
+div {
+    margin-top: 20px;
+}
+
+.skill {
+    clear: both;
+}
+
+.content {
+    margin-top: 10px;
+}
+
+.contact {
+    clear: both;
+}
+
+.header {
+    width: 15%;
+    height:600px;
+    margin-top: 10px;
+    float: left; 
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 20px; 
+    background-color: rgb(87,144,249);
+}
+
+.content {
+    width: 80%;
+    float: left;
+}
+
+.footer {
+    clear: both;
+}
+
