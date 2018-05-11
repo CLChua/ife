@@ -1,0 +1,58 @@
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+ul {
+    height: 96px;
+    list-style-type: none; 
+}
+
+ul li {
+    margin: 10px 40px 10px 0px;
+    float: left;
+}
+
+h2 {
+    width: 20%;
+    height: 96px;
+    text-align: center;
+    background-color: rgb(205, 205, 205);
+    float: left;
+    line-height: 95px;
+}
+
+.header {
+    width: 60%;
+    height: 50px;
+    color: white;
+    background-color: rgb(114,114,114);
+    line-height: 50px;
+}
+
+.content {
+    margin: 0 auto;
+    width: 60%;
+    border-left: 1px rgb(205, 205, 205) solid;
+    border-right: 1px rgb(205, 205, 205) solid;
+    border-bottom: 1px rgb(205, 205, 205) solid;
+}
+
+.footer {
+    width: 60%;
+    clear: both;
+}
+
+.setHeight {
+    height: 96px;
+}
+
+div .info, .contact, .skill, .education, .project {
+    width: 100%;
+    border-top: 1px rgb(205,205,205) solid;
+    border-bottom: 1px white solid; 
+    clear: both;
+}
+
+div .info {
+    border-top: 0px;
+}
