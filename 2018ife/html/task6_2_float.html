@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>通过float实现</title>
+        <style type="text/css">
+            * {
+                box-sizing: border-box;
+            }
+            html, body {
+                margin: 0;
+                height: 100%;
+            }
+
+            .left {
+                width: 300px;
+                height: 100%;
+                float: left;
+                background-color: skyblue;
+            }
+
+            .right {
+                margin-left: 300px;
+                border: 1px red solid;
+                height: 100%;
+                
+                background-color: pink;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <header>实现一个两栏布局，左侧固定宽度，右侧根据浏览器宽度进行自适应变化-float</header>
+        <div class="left"></div>
+        <div class="right"></div>
+    </body>
+</html>
