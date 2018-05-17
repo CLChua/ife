@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>通过position实现</title>
+        <style type="text/css">
+            html, body {
+                margin: 0;
+                height: 100%;
+            }
+
+            .left {
+                width: 30%;
+                height: 100%;
+                position: fixed;
+                left: 0;
+                background-color: skyblue;
+            }
+
+            .right {
+                width: 70%;
+                height: 100%;
+                position: fixed;
+                right: 0;
+                background-color: pink;
+            }
+        </style>
+    </head>
+    <body>
+        <header>实现一个两栏布局，左侧占30%宽度，右侧占70%宽度-position</header>
+        <div class="left"></div>
+        <div class="right"></div>
+    </body>
+</html>
