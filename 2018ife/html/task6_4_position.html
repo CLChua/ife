@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>通过position实现</title>
+        <style type="text/css">
+            html, body {
+                margin: 0;
+                height: 100%;
+            }
+
+            .left {
+                width: 150px;
+                height: 100%;
+                position: fixed;
+                left: 0;
+                background-color: skyblue;
+            }
+
+            .main {
+                height: 100%;
+                margin-left: 150px;
+                margin-right: 150px;
+                background-color: rgb(177, 235, 162);
+            }
+
+            .right {
+                width: 150px;
+                height: 100%;
+                position: fixed;
+                right: 0;
+                background-color: pink;
+            }
+        </style>
+    </head>
+    <body>
+        <header>实现一个三栏布局，左侧固定宽度，右侧固定宽度，中间部分宽度随浏览器宽度变化而自适应变化-position</header>
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="main"></div>
+    </body>
+</html>
