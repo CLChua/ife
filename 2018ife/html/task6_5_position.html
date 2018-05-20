@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>通过float实现</title>
+        <title>通过position实现</title>
         <style type="text/css">
             html, body {
                 margin: 0;
@@ -11,29 +11,30 @@
             .left {
                 width: 150px;
                 height: 100%;
-                float: left;
+                position: fixed;
+                left: 0;
                 background-color: skyblue;
             }
 
             .main {
+                width: 150px;
                 height: 100%;
-                margin-left: 150px;
-                margin-right: 150px;
+                position: fixed;
+                left: 150px;
                 background-color: rgb(177, 235, 162);
             }
 
             .right {
-                width: 150px;
                 height: 100%;
-                float: right;
+                margin-left: 300px;
                 background-color: pink;
             }
         </style>
     </head>
     <body>
-        <header>实现一个三栏布局，左侧固定宽度，右侧固定宽度，中间部分宽度随浏览器宽度变化而自适应变化-float</header>
+        <header>实现一个三栏布局，左侧固定宽度，右侧固定宽度，中间部分宽度随浏览器宽度变化而自适应变化-position</header>
         <div class="left"></div>
-        <div class="right"></div>
         <div class="main"></div>
+        <div class="right"></div>
     </body>
 </html>
