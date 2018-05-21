@@ -77,12 +77,16 @@ hr {
 .navContent li {
     float: left;
     padding: 15px;
-    font-size: 15px;
+    font-size: 10px;
     border: 1px rgb(188, 188, 188) solid;
     border-bottom: 0;
-    border-radius: 10px;
+    border-radius: 10px 10px 0 0;
     display: inline-block;
     list-style-type: none;
+}
+
+.navContent li.active {
+    border-bottom: 1px white solid;
 }
 
 .content {
@@ -92,7 +96,6 @@ hr {
     align-self: auto;
     justify-content: space-between;
     margin: 0 auto;
-    border: 1px red solid;
 }
 
 .content div {
