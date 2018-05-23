@@ -2,10 +2,6 @@
     box-sizing: border-box;
 }
 
-html {
-    
-}
-
 body {
     margin: 0;
 }
@@ -27,7 +23,6 @@ hr {
     width: 960px;
     margin: 0 auto;
     line-height: 60px;
-    background-color: red;
 }
 
 .navHeader p {
@@ -60,14 +55,15 @@ hr {
 .navBanner {
     width: 960px;
     margin: 0 auto;
+    position: relative;
 }
 
 .navBanner ul{
     padding: 0;
     margin: 0;
     position: absolute;
-    left: 1030px;
-    top: 280px;
+    bottom: 10px;
+    right: 0;
 }
 
 .navBanner li {
@@ -76,7 +72,8 @@ hr {
     background-color: white;
     color: black;
     float: left;
-    width: 15px;
+    width: 25px;
+    height: 30px;
     margin-left: 5px;
     text-align: center;
     opacity: 0.3;
@@ -91,6 +88,8 @@ hr {
     text-decoration: none;
     color: black;
     font-size: 10px;
+    text-align: center;
+    line-height: 30px;
 }
 
 .footer {
@@ -133,10 +132,6 @@ hr {
     display: inline-block;
     text-decoration: none;
     width: 100%;
-}
-
-.navContent li.activeLi a {
-    
 }
 
 .content {
