@@ -1,0 +1,68 @@
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+body {
+    
+}
+
+header {
+    width: 1000px;
+    height: 600px;
+    background-image: url(../img/wing7.jpg);
+}
+
+.headerBackground {
+    width: 1000px;
+    height: 600px;
+    background-color: gray;
+    opacity: 0.7;    
+}
+
+.headerContent {
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100px;
+    bottom: 0;
+    border: 1px black solid;
+}
+
+.headerContent h1 {
+    font-family: sans-serif;
+    font-size: 50px;
+    color: aliceblue;
+}
+
+.headerContent p {
+    width: 500px;
+    font-size: 12px;
+    color: white;
+    opacity: 0.7;
+}
+
+.headerContent div {
+    width: 600px;
+    border: 1px rgb(214, 209, 209) solid;
+}
+
+.headerContent div p:nth-of-type(1) {
+    font-size: 20px;
+    color: aliceblue;
+    opacity: 1;
+}
+
+.headerContent div p:nth-of-type(2) {
+    font-size: 12px;
+    color: white;
+}
+
+.headerContent input {
+    background-color: transparent;
+    border: 1px rgb(214, 209, 209) solid;
+}
