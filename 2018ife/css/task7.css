@@ -97,6 +97,7 @@ header {
     color: black;
     text-align: center;
     padding-top: 40px;
+    margin-bottom: 250px;
 }
 
 .section_1 p:nth-of-type(1) {
@@ -199,3 +200,16 @@ header {
     text-align: left;
     margin-bottom: 50px;
 }
+
+.section_2 {
+    width: 1000px;
+    height: 500px;
+    background-image: url(../img/section_2\ backgroundimg.png);
+}
+
+.section_2_background {
+    width: 1000px;
+    height: 500px;
+    background-image: url(../img/section_2Background.png);
+}
+
