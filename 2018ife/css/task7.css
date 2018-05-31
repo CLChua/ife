@@ -213,3 +213,51 @@ header {
     background-image: url(../img/section_2Background.png);
 }
 
+.section_2_word {
+    width: 60%;
+    height: 500px;
+    float: left;
+    padding-top: 100px;
+    border: 1px white solid;
+}
+
+.section_2_word p:nth-of-type(1){
+    width: 230px;
+    color: #fff;
+    font-size: 25px;
+    padding-bottom: 15px;
+}
+
+.section_2_word p:nth-of-type(2){
+    width: 230px;
+    color: #fff;
+    font-size: 12px;
+    margin-bottom: 30px;
+}
+
+.section_2_word input:nth-of-type(1) {
+    width: 150px;
+    height: 30px;
+    font-size: 8px;
+    background-color: #fff;
+    border: #fff;
+    margin-left: 185px;
+}
+
+.section_2_word input:nth-of-type(2) {
+    width: 150px;
+    height: 30px;
+    font-size: 8px;
+    color: rgb(201, 200, 200);
+    background-color: transparent;
+    border: 1px rgb(110, 110, 110) solid;
+    margin-left: 20px;
+}
+
+.section_2_img {
+    width: 40%;
+    height: 500px;
+    opacity: 0.6;
+    float: right;
+    border: 1px red solid;
+}
