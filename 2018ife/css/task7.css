@@ -218,7 +218,6 @@ header {
     height: 500px;
     float: left;
     padding-top: 100px;
-    border: 1px white solid;
 }
 
 .section_2_word p:nth-of-type(1){
@@ -254,10 +253,22 @@ header {
     margin-left: 20px;
 }
 
-.section_2_img {
+.section_2_pic {
     width: 40%;
     height: 500px;
-    opacity: 0.6;
     float: right;
-    border: 1px red solid;
+    text-align: right;
+    padding-top: 5%;
+}
+
+.section_2_pic img:nth-of-type(1) { 
+    width: 400px;
+    height: 400px;
+}
+
+.section_2_pic img:nth-of-type(2) { 
+    width: 362px;
+    height: 359px;
+    position: relative;
+    top: -385px;
 }
