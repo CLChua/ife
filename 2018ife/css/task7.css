@@ -251,6 +251,7 @@ header {
     background-color: transparent;
     border: 1px rgb(110, 110, 110) solid;
     margin-left: 20px;
+    clear: both;
 }
 
 .section_2_pic {
@@ -271,4 +272,58 @@ header {
     height: 359px;
     position: relative;
     top: -385px;
+    clear: both;
 }
+
+.section_3 {
+    width: 1000px;
+    text-align: center;
+    clear: both;
+    border-bottom: 1px rgb(175, 175, 175) solid;
+    margin-bottom: 40px;
+}
+
+.section_3_title {
+    width: 700px;
+    color: black;
+    font-size: 30px;
+    font-family: "Montserrat";
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.section_3_content {
+    width: 700px;
+    padding: 0 20px;
+    margin-bottom: 40px;
+    display: flex;
+}
+
+.section_3_content div {
+    flex: 1;
+}
+
+.section_3_content div img {
+    width: 80px;
+    height: 30px;
+    margin-bottom: 15px;
+}
+
+.section_3_content div p {
+    font-size: 10px;
+}
+
+.section_4 {
+    width: 700px;
+}
+
+.section_4_leftImg img{
+    width: 50%;
+    height: 200x;
+    float: left;
+}
+
+.section_4_rightWord {
+    width: 40%;
+    float: right;
+} 
