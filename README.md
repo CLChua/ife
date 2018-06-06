@@ -9,3 +9,5 @@
      * [样式三](https://clchua.github.io/ife/2018ife/html/task5_resume.html)
 
 * [任务六](https://clchua.github.io/ife/2018ife/html/task6.html)
+
+* [任务七](https://clchua.github.io/ife/2018ife/html/task7.html)

@@ -491,8 +491,46 @@ header {
 }
 
 .section_6_right span {
-    font-size: 12px;
+    font-size: 10px;
     width: 100px;
-    line-height: 20px;
-    text-align: center;
+    line-height: 25px;
+    text-align: justify;
+}
+
+.section_7 {
+    width: 1000px;
+    background-color: black;
+    padding: 50px; 
+    display: flex;
+    justify-content: space-around;
+}
+
+.section_7 div {
+    flex: 1;
+    max-width: 150px;
+    text-align: left;
+    color: #fff;
+}
+
+.section_7 div p {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.section_7 div a {
+    color: rgb(185, 185, 185);
+    font-size: 10px;
+    text-decoration: none;
+}
+
+.section_7 div:nth-of-type(4) p:nth-of-type(2) {
+    font-size: 10px;
+    color: rgb(187, 185, 185);
+    margin-bottom: 10px;
+}
+
+.section_7 div:nth-of-type(4) img {
+    width: 12px;
+    height: 10px;
+    margin-right: 8px;
 }
