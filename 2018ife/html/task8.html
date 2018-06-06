@@ -45,8 +45,22 @@
                 <p>作为前端工程师角色参与了ABC组件的开发</p>
                 <h3>SAN Doc</h3>
                 <p>作为文档工程师参与了SAN Doc编写</p>
-            </div>          
-        </div>  
+            </div> 
+            <div>
+            <p id="result">想知道更多吗？</p>
+            <input type="button" id="know-btn" value="超级想">
+            <input type="button" id="no-btn" value="吁，不想">
+        </div>         
+        </div>       
         <div class="footer"></div>
+        <script>
+            document.getElementById("know-btn").onclick = function() {
+                document.getElementById("result").innerHTML = "爱你哟";
+            }
+            
+            document.getElementById("no-btn").onclick = function() {
+                document.getElementById("result").innerHTML = "哦，你走吧";
+            }
+        </script>
     </body>
 </html>

@@ -11,3 +11,5 @@
 * [任务六](https://clchua.github.io/ife/2018ife/html/task6.html)
 
 * [任务七](https://clchua.github.io/ife/2018ife/html/task7.html)
+
+* [任务八](https://clchua.github.io/ife/2018ife/html/task8.html)
