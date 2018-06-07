@@ -5,29 +5,36 @@
     <title>IFE ECMAScript</title>
 </head>
 <body>        
-    <input id="first-number" type="number" value="0" placeholder="第一个数字">
-    <input id="second-number" type="number" value="0" placeholder="第二个数字">
-    <button id="add-btn">加</button>
-    <button id="minus-btn">减</button>
-    <button id="times-btn">乘</button>
-    <button id="divide-btn">除</button>
+    <input id="dec-number" type="number"   placeholder="输入一个十进制非负整数">
+    <button id="trans-btn" onclick="dec2bin()">转化为二进制</button>
     <p id="result">运算结果</p>
     <script>
-        document.getElementById("add-btn").onclick = function() {
-            document.getElementById("result").innerHTML = parseFloat(document.getElementById("first-number").value) + parseFloat(document.getElementById("second-number").value);
-        }
 
-        document.getElementById("minus-btn").onclick = function() {
-            document.getElementById("result").innerHTML = parseFloat(document.getElementById("first-number").value) - parseFloat(document.getElementById("second-number").value);
-        }
+function dec2bin(decNumber) {
+    // 在这里实现你的转化方法，注意需要判断输入必须为一个非负整数
+    var temp;
+    var decNumber = document.getElementById("dec-number").value;
+    if (decNumber >= 0) {
+        var a = "" + decNumber % 2;
+        temp = parseInt(decNumber / 2);
+        do {
+            a = a + temp % 2;
+            temp = parseInt(temp / 2);
+        } while(temp != 0);
+        console.log(a);
+        a =  a.split("").reverse().join("");
+        document.getElementById("result").innerHTML = a;
+    } else {
+        console.log("不能为负数，请重新输入。");
+    }
+}
 
-        document.getElementById("times-btn").onclick = function() {
-            document.getElementById("result").innerHTML = parseFloat(document.getElementById("first-number").value) * parseFloat(document.getElementById("second-number").value);
-        }
 
-        document.getElementById("divide-btn").onclick = function() {
-            document.getElementById("result").innerHTML = parseFloat(document.getElementById("first-number").value) / parseFloat(document.getElementById("second-number").value);
-        }
+
+
+// 实现党点击转化按钮时，将输入的十进制数字转化为二进制，并显示在result的p标签内
+// Some coding
+
     </script>
 </body>
 </html>
