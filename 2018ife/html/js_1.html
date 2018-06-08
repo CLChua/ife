@@ -21,16 +21,14 @@ function dec2bin(decNumber) {
             a = a + temp % 2;
             temp = parseInt(temp / 2);
         } while(temp != 0);
-        console.log(a);
+        console.log(a.length);
         a =  a.split("").reverse().join("");
+        console.log(typeof a);
         document.getElementById("result").innerHTML = a;
     } else {
         console.log("不能为负数，请重新输入。");
     }
 }
-
-
-
 
 // 实现党点击转化按钮时，将输入的十进制数字转化为二进制，并显示在result的p标签内
 // Some coding
