@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE ECMAScript</title>
+    <style>
+
+    </style>
+</head>
+<body>        
+    <button id="trans-btn" onclick="dec2bin()">开始输入</button>
+    <table>
+        <tr>
+            <td id="1"></td>
+        </tr>
+        <tr>
+            <td id="2"></td>
+            <td id="10"></td>
+        </tr>
+        <tr>
+            <td id="3"></td>
+            <td id="11"></td>
+            <td id="18"></td>
+        </tr>
+        <tr>
+            <td id="4"></td>
+            <td id="12"></td>
+            <td id="19"></td>
+            <td id="25"></td>
+        </tr>
+        <tr>
+            <td id="5"></td>
+            <td id="13"></td>
+            <td id="20"></td>
+            <td id="26"></td>
+            <td id="31"></td>
+        </tr>
+        <tr>
+            <td id="6"></td>
+            <td id="14"></td>
+            <td id="21"></td>
+            <td id="27"></td>
+            <td id="32"></td>
+            <td id="36"></td>
+        </tr>
+        <tr>
+            <td id="7"></td>
+            <td id="15"></td>
+            <td id="22"></td>
+            <td id="28"></td>
+            <td id="33"></td>
+            <td id="37"></td>
+            <td id="40"></td>
+        </tr>
+        <tr>
+            <td id="8"></td>
+            <td id="16"></td>
+            <td id="23"></td>
+            <td id="29"></td>
+            <td id="34"></td>
+            <td id="38"></td>
+            <td id="41"></td>
+            <td id="43"></td>
+        </tr>
+        <tr>
+            <td id="9"></td>
+            <td id="17"></td>
+            <td id="24"></td>
+            <td id="30"></td>
+            <td id="35"></td>
+            <td id="39"></td>
+            <td id="42"></td>
+            <td id="44"></td>
+            <td id="45"></td>
+        </tr>
+    </table>
+    <script>
+
+    function dec2bin() {
+        var k = 1;
+        for (var i = 1; i < 10; i++) {
+            for (var j = i; j < 10; j++) {
+                var temp = i * j;
+                console.log(i + "*" + j + "=" + temp + " ");
+                document.getElementById(k).innerHTML = i + "*" + j + "=" + temp;
+                k++;
+            }  
+        }   
+    }
+    </script>
+</body>
+</html>
