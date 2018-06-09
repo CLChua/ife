@@ -50,6 +50,7 @@
             <p id="result">想知道更多吗？</p>
             <input type="button" id="know-btn" value="超级想">
             <input type="button" id="no-btn" value="吁，不想">
+            <p id="time"></p>
         </div>         
         </div>       
         <div class="footer"></div>
@@ -60,6 +61,17 @@
             
             document.getElementById("no-btn").onclick = function() {
                 document.getElementById("result").innerHTML = "哦，你走吧";
+            }
+            
+            var nowTime = new Date();
+            if (0 <= nowTime.getHours <= 6) {
+                document.getElementById("time").innerHTML = "凌晨好，快休息了。";
+            }
+            if (7 <= nowTime.getHours <= 19) {
+                document.getElementById("time").innerHTML = "现在是白天，加油。";
+            }
+            if (20 <= nowTime.getHours <= 23) {
+                document.getElementById("time").innerHTML = "现在是晚上，累了吧？";
             }
         </script>
     </body>
