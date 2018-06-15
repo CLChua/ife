@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE ECMAScript</title>
+    <style>
+        #show {
+            background-image: url("../img/smile.jpg");
+            background-repeat: no-repeat;
+            width: 480px;
+            height: 480px;   
+        }
+    </style>
+</head>
+<body>            
+    <div id="show"></div>
+    <script>
+        var yIndex = 0;
+        var back = false;
+        // function smile() {
+        //     var oid = document.getElementById("show");
+        //     oid.style.cssText += ";background-position: 0 " + yIndex + "px;";
+        //     console.log(oid.style.cssText);
+        //     if (back == false) {
+        //         yIndex -= 480;
+        //         var t = setTimeout("smile()", 100);
+        //         console.log("移成功啦");
+        //         if (t == 17) {
+        //             clearTimeout(17);
+        //             back = true;
+        //         }   
+        //     }
+        //     if (back == true) {
+        //         yIndex += 480;
+        //         var t = setTimeout("smile()", 100);
+        //         console.log("移成功啦");
+        //         if (t == 34) {
+        //             clearTimeout(34);
+        //             back = false;
+
+        //         }
+        //     }
+        // }
+        // smile();
+        var s = setInterval(function () {
+            var oid = document.getElementById("show");
+            oid.style.cssText += ";background-position: 0 " + yIndex + "px;";
+            if (back == false) {
+                yIndex -= 480;
+                if (yIndex == -7680) {                    
+                    back = true;
+                }   
+            }
+            if (back == true) {
+                yIndex += 480;               
+                if (yIndex == 0) {               
+                    back = false;                   
+                }
+            }
+        }
+        ,100)
+    </script>
+</body>
+</html>
