@@ -24,6 +24,7 @@ function button1() {
 
 //button2 把 A 四舍五入为 B 个小数位数的数字
 
+
 //button3 当前选中数字的绝对值
 function button3() {
     var inputId = "num-" + radioValue;
@@ -132,5 +133,27 @@ function button6() {
 }
 
 //button7 返回 A 和 B 中的最高值
+function button7() {
+    var aValue = document.getElementById("num-a").value;
+    var bValue = document.getElementById("num-b").value;
+    if (aValue > bValue) {
+        document.getElementById("result").innerHTML = "NumberA大";
+    } else if (aValue < bValue) {
+        document.getElementById("result").innerHTML = "NumberB大";
+    } else if (aValue = bValue) {
+        document.getElementById("result").innerHTML = "一样大";
+    }
+}
 
 //button8 返回 A 和 B 中的最低值
+function button8() {
+    var aValue = document.getElementById("num-a").value;
+    var bValue = document.getElementById("num-b").value;
+    if (aValue > bValue) {
+        document.getElementById("result").innerHTML = "NumberB小";
+    } else if (aValue < bValue) {
+        document.getElementById("result").innerHTML = "NumberA小";
+    } else if (aValue = bValue) {
+        document.getElementById("result").innerHTML = "一样大";
+    }
+}
