@@ -157,56 +157,124 @@
 //         document.getElementById("result").innerHTML = "一样大";
 //     }
 // }
-// 任务一
-var radioA = document.getElementById("radio-a");
-var radioB = document.querySelector("#radio-b");
-var numA = document.querySelector("#num-a");
-var numB = document.querySelector("#num-b");
-var oResult = document.querySelector('#result');
-//设置判断是否为数值函数
-function isNumber () {
-    //当选中A时，返回A的值，否则返回B的值
-    var checked = radioA.checked ? Number(numA.value) : Number(numB.value);
-    //判断是否为数值，是返回数值，否则console错误信息
-    if(isNaN(checked) || checked === '0') {
-        console.log("请输入数值");
-    }else {
-        return checked;
-    }
+
+//判断是否选中
+function ischecked(checkedradio) {
+    return checkedradio.checked;
 }
 
-document.getElementById("container").onclick = function (ev) {
-    var e = ev;
-    var onclickTarget = e.target;
-    if (onclickTarget.nodeName.toLowerCase() == "button") {
-        var btnList = document.querySelectorAll("button");
-        var btnIndex = Array.prototype.indexOf.call(btnList, onclickTarget);
-        switch (btnIndex) {
-            case 0:
-                isNumber();
-                break;
-            case 1:
-                oResult.innerHTML = parseInt(numA.value).toFixed(parseInt(numB.value));
-                break;
-            case 2:
-                oResult.innerHTML = Math.abs(isNumber());
-                break;
-            case 3:
-                oResult.innerHTML = Math.ceil(isNumber());
-                break;
-            case 4:
-                oResult.innerHTML = Math.floor(isNumber());
-                break;
-            case 5:
-                oResult.innerHTML = Math.round(isNumber());
-                break;
-            case 6:
-                oResult.innerHTML = Math.max(numA.value, numB.value);
-                break;
-            case 7:
-                oResult.innerHTML = Math.min(numA.value, numB.value);
-                break;
-        }
+//任务二
+var radioA2 = document.getElementById("radio-a2");
+var radioB2 = document.getElementById("radio-b2");
+var numA2 = document.getElementById("num-a2");
+var numB2 = document.getElementById("num-b2");
+var strA = document.getElementById("str-a");
+var strB = document.getElementById("str-b");
+var oResult2 = document.getElementById("result2");
+
+window.onload = function () {
+    document.getElementById("container2").onclick = function (event) {
+        var e = event;
+        var onclickTarget = e.target;
+        if (onclickTarget.nodeName.toLowerCase() == "button") {
+            var btnList = document.querySelectorAll("button");
+            var btnIndex = Array.prototype.indexOf.call(btnList, onclickTarget);
+            switch (btnIndex) {
+                case 8:
+                    if (ischecked(radioA2) && strA.value !== "") {
+                        oResult2.innerHTML = strA.value.length;
+                    } else if (ischecked(radioB2) && strB.value !== "") {
+                        oResult2.innerHTML = strB.value.length;
+                    } else {
+                        oResult2.innerHTML = "请输入内容"
+                    }
+                    break;
+                case 9:
+                    if (ischecked(radioA2) && strA.value !== "") {
+                        oResult2.innerHTML = strA.value.charAt(2);
+                    } else if (ischecked(radioB2) && strB.value !== "") {
+                        oResult2.innerHTML = strB.value.charAt(2);
+                    } else {
+                        oResult2.innerHTML = "请输入内容"
+                    }
+                    break;
+                case 10:
+                    if (strB.value !== "" && strA.value !== "") {
+                        oResult2.innerHTML = strA.value.concat(strB.value);
+                    } else {
+                        oResult2.innerHTML = "请输入内容"
+                    }
+                    break;
+                case 11:
+                    oResult2.innerHTML = strA.value.indexOf(strB.value);
+                    break;
+                case 12:
+                    oResult2.innerHTML = strB.value.lastIndexOf(strA.value);
+                    break;
+                case 13:
+                    if (ischecked(radioA2) && strA.value !== "") {
+                        oResult2.innerHTML = strA.value.slice(numA2.value, numB2.value);
+                    } else if (ischecked(radioB2) && strB.value !== "") {
+                        oResult2.innerHTML = strB.value.slice(numA2.value, numB2.value);;
+                    } else {
+                        oResult2.innerHTML = "请输入内容"
+                    }
+                    break;
+                // case 14:
+                //     if (ischecked(radioA2) && strA.value !== "") {
+                //         oResult2.innerHTML = ;
+                //     } else if (ischecked(radioB2) && strB.value !== "") {
+                //         oResult2.innerHTML = ;
+                //     } else {
+                //         oResult2.innerHTML = "请输入内容"
+                //     }
+                //     break;
+                // case 15:
+                //     if (ischecked(radioA2) && strA.value !== "") {
+                //         oResult2.innerHTML = ;
+                //     } else if (ischecked(radioB2) && strB.value !== "") {
+                //         oResult2.innerHTML = ;
+                //     } else {
+                //         oResult2.innerHTML = "请输入内容"
+                //     }
+                //     break;
+                // case 16:
+                //     if (ischecked(radioA2) && strA.value !== "") {
+                //         oResult2.innerHTML = ;
+                //     } else if (ischecked(radioB2) && strB.value !== "") {
+                //         oResult2.innerHTML = ;
+                //     } else {
+                //         oResult2.innerHTML = "请输入内容"
+                //     }
+                //     break;
+                // case 17:
+                //     if (ischecked(radioA2) && strA.value !== "") {
+                //         oResult2.innerHTML = ;
+                //     } else if (ischecked(radioB2) && strB.value !== "") {
+                //         oResult2.innerHTML = ;
+                //     } else {
+                //         oResult2.innerHTML = "请输入内容"
+                //     }
+                //     break;
+                // case 18:
+                //     if (ischecked(radioA2) && strA.value !== "") {
+                //         oResult2.innerHTML = ;
+                //     } else if (ischecked(radioB2) && strB.value !== "") {
+                //         oResult2.innerHTML = ;
+                //     } else {
+                //         oResult2.innerHTML = "请输入内容"
+                //     }
+                //     break;
+                // case 19:
+                //     if (ischecked(radioA2) && strA.value !== "") {
+                //         oResult2.innerHTML = ;
+                //     } else if (ischecked(radioB2) && strB.value !== "") {
+                //         oResult2.innerHTML = ;
+                //     } else {
+                //         oResult2.innerHTML = "请输入内容"
+                //     }
+                //     break;
+            }
+        }           
     }
-    
 }
