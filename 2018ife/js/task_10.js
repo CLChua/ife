@@ -272,3 +272,65 @@ window.onload = function () {
         }           
     }
 }
+
+//任务三
+/*
+实现一个字符串头尾去除空格的函数
+注意需要去除的空格，包括全角、半角空格
+暂时不需要学习和使用正则表达式的方式
+*/
+function diyTrim(str) {
+    var result3 = str;
+    for (var i = 0; i < result3.length; i++) {
+        if (result3[0] === " " || result3[0] === "　") {
+            result3 = result3.slice(1);
+        } else if (result3[result3.length - 1] === " " || result3[result3.length - 1] === "　") {
+            result3 = result3.slice(0, result3.length - 2);
+        }
+    } 
+    return result3;
+}
+
+// 测试用例
+console.log(diyTrim(' a f b    ')); // ->a f b
+console.log(diyTrim('    ffdaf    ')); // ->ffdaf
+console.log(diyTrim('1    ')); // ->1
+console.log(diyTrim('　　f')); // ->f
+console.log(diyTrim('  　  a f b 　　 ')); // ->a f b
+console.log(diyTrim(' ')); // ->
+console.log(diyTrim('　')); // ->
+console.log(diyTrim('')); // ->
+
+/*
+去掉字符串str中，连续重复的地方
+*/
+function removeRepetition(str) {
+    //自己写的
+    // var result4 = str.split("");
+    // for (var i = 0; i < result4.length; i++) {
+    //     if (i < result4.length - 1) {
+    //         if (result4[i] == result4[i+1]) {
+    //             result4.splice(i, 1)
+    //         }
+    //         console.log(result4.length);
+    //     } 
+    // }
+    var result4 = "";
+    var strLength = str.length;
+    for (var i = 0; i < strLength; i++) {
+        if (str[0] === str[1]) {
+            str = str.slice(1);
+        } else {
+            result4 += str[0];
+            str = str.slice(1);
+        }
+    }
+    return result4;
+}
+
+// 测试用例
+console.log(removeRepetition("aaa")); // ->a
+console.log(removeRepetition("abbba")); // ->aba
+console.log(removeRepetition("aabbaabb")); // ->abab
+console.log(removeRepetition("")); // ->
+console.log(removeRepetition("abc")); // ->abc
