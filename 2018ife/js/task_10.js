@@ -171,6 +171,7 @@ var numB2 = document.getElementById("num-b2");
 var strA = document.getElementById("str-a");
 var strB = document.getElementById("str-b");
 var oResult2 = document.getElementById("result2");
+var arr; //用于最后一个按钮
 
 window.onload = function () {
     document.getElementById("container2").onclick = function (event) {
@@ -220,60 +221,53 @@ window.onload = function () {
                         oResult2.innerHTML = "请输入内容"
                     }
                     break;
-                // case 14:
-                //     if (ischecked(radioA2) && strA.value !== "") {
-                //         oResult2.innerHTML = ;
-                //     } else if (ischecked(radioB2) && strB.value !== "") {
-                //         oResult2.innerHTML = ;
-                //     } else {
-                //         oResult2.innerHTML = "请输入内容"
-                //     }
-                //     break;
-                // case 15:
-                //     if (ischecked(radioA2) && strA.value !== "") {
-                //         oResult2.innerHTML = ;
-                //     } else if (ischecked(radioB2) && strB.value !== "") {
-                //         oResult2.innerHTML = ;
-                //     } else {
-                //         oResult2.innerHTML = "请输入内容"
-                //     }
-                //     break;
-                // case 16:
-                //     if (ischecked(radioA2) && strA.value !== "") {
-                //         oResult2.innerHTML = ;
-                //     } else if (ischecked(radioB2) && strB.value !== "") {
-                //         oResult2.innerHTML = ;
-                //     } else {
-                //         oResult2.innerHTML = "请输入内容"
-                //     }
-                //     break;
-                // case 17:
-                //     if (ischecked(radioA2) && strA.value !== "") {
-                //         oResult2.innerHTML = ;
-                //     } else if (ischecked(radioB2) && strB.value !== "") {
-                //         oResult2.innerHTML = ;
-                //     } else {
-                //         oResult2.innerHTML = "请输入内容"
-                //     }
-                //     break;
-                // case 18:
-                //     if (ischecked(radioA2) && strA.value !== "") {
-                //         oResult2.innerHTML = ;
-                //     } else if (ischecked(radioB2) && strB.value !== "") {
-                //         oResult2.innerHTML = ;
-                //     } else {
-                //         oResult2.innerHTML = "请输入内容"
-                //     }
-                //     break;
-                // case 19:
-                //     if (ischecked(radioA2) && strA.value !== "") {
-                //         oResult2.innerHTML = ;
-                //     } else if (ischecked(radioB2) && strB.value !== "") {
-                //         oResult2.innerHTML = ;
-                //     } else {
-                //         oResult2.innerHTML = "请输入内容"
-                //     }
-                //     break;
+                //未实现统计行数。原思路是统计enter键按下的次数+1，但输满的话会自动换行
+                
+                case 15:
+                    if (ischecked(radioA2) && strA.value !== "") {
+                        oResult2.innerHTML = strA.value.substr(numA2, numB2);
+                    } else if (ischecked(radioB2) && strB.value !== "") {
+                        oResult2.innerHTML = strB.value.substr(numA2, numB2);
+                    } else {
+                        oResult2.innerHTML = "请输入内容"
+                    }
+                    break;
+                case 16:
+                    if (ischecked(radioA2) && strA.value !== "") {
+                        oResult2.innerHTML = strA.value.toUpperCase();
+                    } else if (ischecked(radioB2) && strB.value !== "") {
+                        oResult2.innerHTML = strB.value.toUpperCase();
+                    } else {
+                        oResult2.innerHTML = "请输入内容"
+                    }
+                    break;
+                case 17:
+                    if (ischecked(radioA2) && strA.value !== "") {
+                        oResult2.innerHTML = strA.value.toLowerCase();
+                    } else if (ischecked(radioB2) && strB.value !== "") {
+                        oResult2.innerHTML = strB.value.toLowerCase();
+                    } else {
+                        oResult2.innerHTML = "请输入内容"
+                    }
+                    break;
+                case 18:
+                    if (ischecked(radioA2) && strA.value !== "") {
+                        oResult2.innerHTML = strA.value.split(" ").join("");
+                    } else if (ischecked(radioB2) && strB.value !== "") {
+                        oResult2.innerHTML = strB.value.split(" ").join("");
+                    } else {
+                        oResult2.innerHTML = "请输入内容"
+                    }
+                    break;
+                case 19:
+                    if (ischecked(radioA2) && strA.value !== "") {
+                        oResult2.innerHTML = strA.value.replace(/a/g, strB.value);
+                    } else if (ischecked(radioB2) && strB.value !== "") {
+                        oResult2.innerHTML = strB.value.replace(/a/g, strA.value);
+                    } else {
+                        oResult2.innerHTML = "请输入内容"
+                    }
+                    break;
             }
         }           
     }
