@@ -432,8 +432,7 @@ function getListWithDLR(obj) {
             } else if (obj[i] == obj.right) {
                 findName(obj[i]);
             }
-        }
-        
+        }       
     }
     findName(obj);
     console.log(nameList);
@@ -441,30 +440,30 @@ function getListWithDLR(obj) {
 getListWithDLR(tree);
 
 // 把这个对象中所有的名字以“中序遍历”的方式全部输出到console中，左根右
-function getListWithLDR(obj) {
-    var nameList = "";
-    function findName(obj) {
-        for (i in obj) {
-            if (obj[i] == obj.left) {
-                findName(obj[i]);
-                if (obj[i] == obj.name) {
-                    nameList += obj[i].name + " ";
-                }
+// function getListWithLDR(obj) {
+//     var nameList = "";
+//     function findName(obj) {
+//         for (i in obj) {
+//             if (obj[i] == obj.left) {
+//                 findName(obj[i]);
+//                 if (obj[i] == obj.name) {
+//                     nameList += obj[i].name + " ";
+//                 }
                 
-            } else if (obj[i] == obj.right) {
-                findName(obj[i]);
-                if (obj[i] == obj.name) {
-                    nameList += obj[i].name + " ";
-                }
-            }
-        }
-    }
-    findName(obj);
-    console.log(nameList);
-}
-getListWithLDR(tree);
+//             } else if (obj[i] == obj.right) {
+//                 findName(obj[i]);
+//                 if (obj[i] == obj.name) {
+//                     nameList += obj[i].name + " ";
+//                 }
+//             }
+//         }
+//     }
+//     findName(obj);
+//     console.log(nameList);
+// }
+// getListWithLDR(tree);
 
 // 把这个对象中所有的名字以“后序遍历”的方式全部输出到console中，左右根
-function getListWithLRD() {
+// function getListWithLRD() {
 
-}
+// }
