@@ -24,62 +24,8 @@
     </div>
     <p id="result"></p>
     <hr/>
-    <script>
-        // 任务一
-        var radioA = document.getElementById("radio-a");
-        var radioB = document.querySelector("#radio-b");
-        var numA = document.querySelector("#num-a");
-        var numB = document.querySelector("#num-b");
-        var oResult = document.querySelector('#result');
-        //设置判断是否为数值函数
-        function isNumber () {
-            //当选中A时，返回A的值，否则返回B的值
-            var checkNumber = radioA.checked ? Number(numA.value) : Number(numB.value);
-            //判断是否为数值，是返回数值，否则console错误信息
-            if(isNaN(checkNumber) || checkNumber === "") {
-                console.log("请输入数值");
-            }else {
-                return checkNumber;
-            }
-        }
-        
-        document.getElementById("container").onclick = function (event) {
-            var e = event;
-            var onclickTarget = e.target;
-            if (onclickTarget.nodeName.toLowerCase() == "button") {
-                var btnList = document.querySelectorAll("button");
-                var btnIndex = Array.prototype.indexOf.call(btnList, onclickTarget);
-                switch (btnIndex) {
-                    case 0:
-                        isNumber();
-                        break;
-                    case 1:
-                        oResult.innerHTML = parseInt(numA.value).toFixed(parseInt(numB.value));
-                        break;
-                    case 2:
-                        oResult.innerHTML = Math.abs(isNumber());
-                        break;
-                    case 3:
-                        oResult.innerHTML = Math.ceil(isNumber());
-                        break;
-                    case 4:
-                        oResult.innerHTML = Math.floor(isNumber());
-                        break;
-                    case 5:
-                        oResult.innerHTML = Math.round(isNumber());
-                        break;
-                    case 6:
-                        oResult.innerHTML = Math.max(numA.value, numB.value);
-                        break;
-                    case 7:
-                        oResult.innerHTML = Math.min(numA.value, numB.value);
-                        break;
-                }
-            }           
-        }      
-    </script>
 
-    // 任务二
+    任务二
     <div>
         <label>String A:
             <input id="radio-a2" type="radio" checked="true" name="str-obj" value="a">
@@ -108,6 +54,15 @@
     </div>
     <p id="result2"></p>
     <hr/>
+    <input id="queue-input" type="text">
+    <p id="queue-cont">队列内容：apple-&gt;pear</p>
+    <div class="container3">
+        <button id="in-btn">入队</button>
+        <button id="out-btn">出队</button>
+        <button id="font-btn">打印队头元素内容</button>
+        <button id="empty-btn">判断队列是否为空</button>
+    </div> 
+
     <script src="../js/task_10.js"></script>
 </body>
 </html>
