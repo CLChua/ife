@@ -325,7 +325,7 @@ window.onload = function () {
             }
         }           
     }
-
+    
 }
 
 //任务三
@@ -492,7 +492,7 @@ function getListWithDLR(obj) {
     findName(obj);
     console.log(nameList);
 }
-getListWithDLR(tree);
+//getListWithDLR(tree);
 
 // 把这个对象中所有的名字以“中序遍历”的方式全部输出到console中，左根右
 // function getListWithLDR(obj) {
@@ -527,28 +527,5 @@ getListWithDLR(tree);
 //实现如阅读材料中，队列的相关入队、出队、获取队头、判空的操作
 //队头对应数组中最后一个元素
 //入队和出队操作后，需要在 id 为 queue-cont 的 p 标签中更新显示队列中的内容，队头在最右侧，中间用 -> 连接
-var queue = ["apple", "pear"];
-var inBtn = document.getElementById("in-btn");
-var outBtn = document.getElementById("out-btn");
-var fontBtn = document.getElementById("font-btn");
-var emptyBtn = document.getElementById("empty-btn");
-var queueCont = document.getElementById("queue-cont");
-var queueInput = document.getElementById("queue-input");
-//console.log("z");
 
-document.getElementById("container3").onclick = function (event) {
-    console.log("f");
-    var e = event;
-    var onclickTarget = e.target;
-    if (onclickTarget.nodeName.toLowerCase() == "button") {
-        var btnList = document.querySelectorAll("button");
-        var btnIndex = Array.prototype.indexOf.call(btnList, onclickTarget);
-        console.log(btnIndex);
-        switch(btnIndex) {
-            case 20:
-            queue.push(queueInput.value);
-            console.log(queue.join("->"));
-            break;
-        }
-    }
-}
+
