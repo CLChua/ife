@@ -17,7 +17,7 @@
         }
 
         function button3() {
-            queueCont.innerHTML = "对头内容：" + queue[queue.length - 1];
+            queueCont.innerHTML = "队头内容：" + queue[queue.length - 1];
         }
 
         function button4() {
