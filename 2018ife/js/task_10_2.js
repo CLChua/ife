@@ -68,26 +68,84 @@ function button4() {
 
         //将二维数组，按照每个元素中第二个数从大到小的顺序进行排序输出
         var arr3 = [[10, 14], [16, 60], [7, 44], [26, 35], [22, 63]];
-        console.log(arr3[0][1]);
-        function compareByer() { //原谅取的这个名字
-            for (i in arr3) {
-                if (i < arr3.length - 1) {
-                    if (arr3[i][1] < arr3[i + 1][1]) {
-                        return -1;
-                    } else if (arr3[i][1] > arr3[i + 1][1]) {
-                        return 1;
-                    } else if (arr3[i][1] = arr3[i + 1][1]) {
-                        return 0;
-                    } 
-                } else {
-                    if (arr3[i][1] < arr3[i - 1][1]) {
-                        return -1;
-                    } else if (arr3[i][1] > arr3[i - 1][1]) {
-                        return 1;
-                    } else if (arr3[i][1] = arr3[i - 1][1]) {
-                        return 0;
-                    }
-                }
+        function compareByer(a, b) { //原谅取的这个名字
+            if (a[1] < b[1]) {
+                return 1;
+            } else if(a[1] > b[1]) {
+                return -1;
+            } else {
+                return 0;
             }
         }
         console.log(arr3.sort(compareByer));
+
+        //将数组分别按元素对象的value值从小到大进行排序后输出
+        var arr4 = [
+            {
+                id: 1,
+                name: 'candy',
+                value: 40
+            }, {
+                id: 2,
+                name: 'Simon',
+                value: 50
+            }, {
+                id: 3,
+                name: 'Tony',
+                value: 45
+            }, {
+                id: 4,
+                name: 'Annie',
+                value: 60
+            }
+        ];
+
+        console.log(arr4.sort(function(a, b) {
+            if(a.value < b.value) {
+                return -1;
+            } else if(a.value > b.value) {
+                return 1;
+            } else {
+                return 0;
+            }
+        }));
+
+        //对象转数组
+        var scoreObject = {
+            "Tony": {
+                "Math": 95,
+                "English": 79,
+                "Music": 68
+            }, 
+            "Simon": {
+                "Math": 100,
+                "English": 95,
+                "Music": 98
+            }, 
+            "Annie": {
+                "Math": 54,
+                "English": 65,
+                "Music": 88
+            }
+        }
+        console.log(scoreObject.Tony.Math);
+
+        var scoreArr = new Array();
+        function otoa() {
+            for(i in scoreObject) {
+                scoreArr[i] = scoreObject[i];
+            }
+            console.log(scoreArr);
+        }
+        otoa();
+
+        //转化为二维数组
+        var scoreArr2 = new Array(4);
+        function otoa2() {
+            for(i in scoreObject) {
+                for(j in scoreArr2) {
+
+                }
+            }
+        }
+        
