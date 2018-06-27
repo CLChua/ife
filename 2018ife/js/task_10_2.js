@@ -133,6 +133,7 @@ function button4() {
         var scoreArr = new Array();
         function otoa() {
             for(i in scoreObject) {
+                console.log(i);
                 scoreArr[i] = scoreObject[i];
             }
             console.log(scoreArr);
@@ -140,12 +141,20 @@ function button4() {
         otoa();
 
         //转化为二维数组
-        var scoreArr2 = new Array(4);
-        function otoa2() {
-            for(i in scoreObject) {
-                for(j in scoreArr2) {
-
+        
+        function otoa2(obj) {
+            var scoreArr2 = new Array();
+            var score = new Array();
+            var arr;
+            for(i in obj) {
+                score = obj[i];
+                arr = [i];
+                scoreArr2.push(arr);
+                for(j in score) {
+                    arr.push(score[j]);
                 }
             }
+            console.log(scoreArr2);
         }
+        otoa2(scoreObject);
         
