@@ -50,6 +50,10 @@ function showTime2() {
     document.getElementById("result2").innerHTML = nowYear + "年" + nowMonth + "月" + nowDay + "日" + " " + nowWeekDay + " " + nowHour + ":" + nowMinute + ":" + nowSecond;
 }
 
+function style2() {
+    
+}
+
 function checkTime(i) {
     if (i < 10) {
         i = "0" + i;      
