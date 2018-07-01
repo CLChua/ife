@@ -47,7 +47,8 @@ function showTime2() {
     nowMinute = checkTime(nowMinute);
     nowHour = checkTime(nowHour);
     nowSecond = checkTime(nowSecond);
-    document.getElementById("result2").innerHTML = nowYear + "年" + nowMonth + "月" + nowDay + "日" + " " + nowWeekDay + " " + nowHour + ":" + nowMinute + ":" + nowSecond;
+    //document.getElementById("result2").innerHTML = nowYear + "年" + nowMonth + "月" + nowDay + "日" + " " + nowWeekDay + " " + nowHour + ":" + nowMinute + ":" + nowSecond;
+    
 }
 
 function style2() {
