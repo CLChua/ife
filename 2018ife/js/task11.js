@@ -51,6 +51,9 @@ function showTime2() {
     
 }
 
+//把每个功能都分开
+
+
 function style2() {
     
 }
