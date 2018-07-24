@@ -47,17 +47,10 @@ function showTime2() {
     nowMinute = checkTime(nowMinute);
     nowHour = checkTime(nowHour);
     nowSecond = checkTime(nowSecond);
-    //document.getElementById("result2").innerHTML = nowYear + "年" + nowMonth + "月" + nowDay + "日" + " " + nowWeekDay + " " + nowHour + ":" + nowMinute + ":" + nowSecond;
+    document.getElementById("result2").innerHTML = nowYear + "年" + nowMonth + "月" + nowDay + "日" + " " + nowWeekDay + " " + nowHour + ":" + nowMinute + ":" + nowSecond;
     
 }
 
-//把每个功能都分开
-//获取年
-//获取月
-//获取日
-//获取时
-//获取分
-//获取秒
 
 
 function style2() {
@@ -72,3 +65,79 @@ function checkTime(i) {
 }
 
 setInterval("showTime2()", 1000);
+
+//把每个功能都分开
+var nowDate = new Date();
+//获取年
+function getNowYear() {
+    return nowDate.getFullYear();
+}
+//获取月
+function getNowMonth() {
+    var nowMonth =  nowDate.getMonth();
+    return checkTime3(nowMonth);
+}
+//获取日
+function getNowDay() {
+    var nowDay =  nowDate.getDate();
+    return checkTime3(nowDay);
+}
+//获取时
+function getNowHours() {
+    var nowDate = new Date();
+    var nowHour =  nowDate.getHours();
+    return checkTime3(nowHour);
+}
+//获取分
+function getNowMinutes() {
+    var nowDate = new Date();
+    var NowMinute =  nowDate.getMinutes();
+    return checkTime3(NowMinute);
+}
+//获取秒
+function getNowSeconds() {
+    var nowDate = new Date();
+    var nowSecond =  nowDate.getSeconds();
+    return checkTime3(nowSecond);
+}
+//获取星期几
+function getWeekDay() {
+    var nowDate = new Date();
+    var nowWeekDay = "";
+    switch(nowDate.getDay()) {
+        case 0:
+            return "星期天";
+            break;
+        case 1:
+            return "星期一";
+            break;
+        case 2:
+            return "星期二";
+            break;
+        case 3:
+            return "星期三";
+            break;
+        case 4:
+            return "星期四";
+            break;
+        case 5:
+            return "星期五";
+            break;
+        case 6:
+            return "星期六";
+            break;
+    }
+}
+
+function checkTime3(i) {
+    if (i < 10) {
+        i = "0" + i;      
+    }  
+    return i;
+}
+
+function showTime3() {
+    document.getElementById("result3").innerHTML = getNowYear() + "-" + getNowMonth() + "-" + getNowDay() + " " + getWeekDay() + " " + getNowHours() + ":" + getNowMinutes() + ":" + getNowSeconds();
+}
+
+setInterval("showTime3()", 1000);
