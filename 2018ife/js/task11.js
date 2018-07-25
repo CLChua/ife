@@ -3,7 +3,7 @@ function showTime() {
     var nowDate = new Date();
     document.getElementById("result").innerHTML = Date();
 }
-setInterval("showTime()", 1000);
+//setInterval("showTime()", 1000);
 
 // var nowYear = nowDate.getFullYear();
 // var nowMonth = nowDate.getMonth();
@@ -64,7 +64,7 @@ function checkTime(i) {
     return i;
 }
 
-setInterval("showTime2()", 1000);
+//setInterval("showTime2()", 1000);
 
 //把每个功能都分开
 var nowDate = new Date();
@@ -140,4 +140,26 @@ function showTime3() {
     document.getElementById("result3").innerHTML = getNowYear() + "-" + getNowMonth() + "-" + getNowDay() + " " + getWeekDay() + " " + getNowHours() + ":" + getNowMinutes() + ":" + getNowSeconds();
 }
 
-setInterval("showTime3()", 1000);
+//setInterval("showTime3()", 1000);
+
+//获取下拉列表的值
+function selectVaule(id) {
+    var selectedValue = document.getElementById(id);
+    var optionValue = selectedValue.getElementsByTagName("option");
+    for(var i in optionValue) {
+        console.log(optionValue[i].selected);
+        if(optionValue[i].selected == true) {
+            return optionValue[i].value;
+        }
+    }
+    console.log(selectedValue);
+}
+
+//展示时间
+function showTime4() {
+    document.getElementById("result-wrapper").innerHTML = "现在距离" + selectVaule("year-select") + "年" + selectVaule("month-select") + "月";
+}
+
+setInterval("showTime4()", 1000);
+
+selectVaule("year-select");
