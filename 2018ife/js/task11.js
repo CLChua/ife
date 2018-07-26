@@ -149,17 +149,31 @@ function selectVaule(id) {
     for(var i in optionValue) {
         console.log(optionValue[i].selected);
         if(optionValue[i].selected == true) {
-            return optionValue[i].value;
+            return checkTime4(optionValue[i].value)
         }
     }
     console.log(selectedValue);
 }
 
-//展示时间
-function showTime4() {
-    document.getElementById("result-wrapper").innerHTML = "现在距离" + selectVaule("year-select") + "年" + selectVaule("month-select") + "月";
+function checkTime4(i) {
+    if (i < 10) {
+        i = "0" + i;      
+    }  
+    return i;
 }
 
-setInterval("showTime4()", 1000);
+//计算时间差
+var selectedNowTime = "";
+function differenceTime() {
+
+}
+
+//展示时间
+function showTime4() {
+    document.getElementById("result-wrapper").innerHTML = "现在距离" + selectVaule("year-select") + "年" + selectVaule("month-select") + "月" + selectVaule("day-select") + "日" + " " + selectVaule("hour-select") + ":" + selectVaule("minute-select") + ":" + selectVaule("second-select");
+    selectedNowTime =  selectVaule("year-select") + "/" + selectVaule("year-select") + "/" + selectVaule("year-select") + " " + selectVaule("hour-select") + ":" + selectVaule("minute-select") + ":" + selectVaule("second-select");
+}
+
+//setInterval("showTime4()", 1000);
 
 selectVaule("year-select");
