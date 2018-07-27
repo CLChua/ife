@@ -162,17 +162,27 @@ function checkTime4(i) {
     return i;
 }
 
-//计算时间差
-var selectedNowTime = "";
-function differenceTime() {
-
-}
-
 //展示时间
+var selectedNowTime = ""; //获取选择的时间
+var diffTime = 0;
+var diffDay = 0;
+var diffHour = 0;
+var diffMinute = 0;
+var diffSecond = 0;
 function showTime4() {
-    document.getElementById("result-wrapper").innerHTML = "现在距离" + selectVaule("year-select") + "年" + selectVaule("month-select") + "月" + selectVaule("day-select") + "日" + " " + selectVaule("hour-select") + ":" + selectVaule("minute-select") + ":" + selectVaule("second-select");
     selectedNowTime =  selectVaule("year-select") + "/" + selectVaule("year-select") + "/" + selectVaule("year-select") + " " + selectVaule("hour-select") + ":" + selectVaule("minute-select") + ":" + selectVaule("second-select");
+    var nowDate = new Date();
+    var selectedNowTime = new Date(selectedNowTime);
+    if(nowDate.getTime() > selectedNowTime.getTime()) {
+        diffTime = nowDate.getTime() - selectedNowTime.getTime();
+        diffSecond = diffTime / 1000;
+        diffMinute = diffSecond / 
+    }
+    document.getElementById("result-wrapper").innerHTML = "现在距离" + selectVaule("year-select") + "年" + selectVaule("month-select") + "月" + selectVaule("day-select") + "日" + " " + selectVaule("hour-select") + ":" + selectVaule("minute-select") + ":" + selectVaule("second-select");
+    
 }
+
+//计算时间差
 
 //setInterval("showTime4()", 1000);
 
