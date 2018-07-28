@@ -3,7 +3,7 @@ function showTime() {
     var nowDate = new Date();
     document.getElementById("result").innerHTML = Date();
 }
-//setInterval("showTime()", 1000);
+setInterval("showTime()", 1000);
 
 // var nowYear = nowDate.getFullYear();
 // var nowMonth = nowDate.getMonth();
@@ -64,7 +64,7 @@ function checkTime(i) {
     return i;
 }
 
-//setInterval("showTime2()", 1000);
+setInterval("showTime2()", 1000);
 
 //把每个功能都分开
 var nowDate = new Date();
@@ -140,19 +140,19 @@ function showTime3() {
     document.getElementById("result3").innerHTML = getNowYear() + "-" + getNowMonth() + "-" + getNowDay() + " " + getWeekDay() + " " + getNowHours() + ":" + getNowMinutes() + ":" + getNowSeconds();
 }
 
-//setInterval("showTime3()", 1000);
+setInterval("showTime3()", 1000);
 
 //获取下拉列表的值
 function selectVaule(id) {
     var selectedValue = document.getElementById(id);
     var optionValue = selectedValue.getElementsByTagName("option");
     for(var i in optionValue) {
-        console.log(optionValue[i].selected);
+        //console.log(optionValue[i].selected);
         if(optionValue[i].selected == true) {
             return checkTime4(optionValue[i].value)
         }
     }
-    console.log(selectedValue);
+    //console.log(selectedValue);
 }
 
 function checkTime4(i) {
@@ -170,20 +170,30 @@ var diffHour = 0;
 var diffMinute = 0;
 var diffSecond = 0;
 function showTime4() {
-    selectedNowTime =  selectVaule("year-select") + "/" + selectVaule("year-select") + "/" + selectVaule("year-select") + " " + selectVaule("hour-select") + ":" + selectVaule("minute-select") + ":" + selectVaule("second-select");
+    selectedNowTime =  selectVaule("year-select") + "/" + selectVaule("month-select") + "/" + selectVaule("day-select") + " " + selectVaule("hour-select") + ":" + selectVaule("minute-select") + ":" + selectVaule("second-select");
     var nowDate = new Date();
     var selectedNowTime = new Date(selectedNowTime);
     if(nowDate.getTime() > selectedNowTime.getTime()) {
         diffTime = nowDate.getTime() - selectedNowTime.getTime();
-        diffSecond = diffTime / 1000;
-        diffMinute = diffSecond / 
-    }
-    document.getElementById("result-wrapper").innerHTML = "现在距离" + selectVaule("year-select") + "年" + selectVaule("month-select") + "月" + selectVaule("day-select") + "日" + " " + selectVaule("hour-select") + ":" + selectVaule("minute-select") + ":" + selectVaule("second-select");
-    
+        diffDay = Math.floor(diffTime / (24 * 3600 * 1000));
+        var temp1 = diffTime % (24 * 3600 * 1000);
+        diffHour = Math.floor(temp1 / (3600 * 1000));
+        var temp2 = temp1 % (3600 * 1000);
+        diffMinute = Math.floor(temp2 / (60 * 1000));
+        var temp3 = temp2 % (60 * 1000);
+        diffSecond = Math.floor(temp3 / 1000);
+        document.getElementById("result-wrapper").innerHTML = "现在距离" + selectVaule("year-select") + "年" + selectVaule("month-select") + "月" + selectVaule("day-select") + "日" + " " + selectVaule("hour-select") + ":" + selectVaule("minute-select") + ":" + selectVaule("second-select") + " 已经过去 " + diffDay + "天" + diffHour + "小时" + diffMinute + "分" + diffSecond + "秒";
+    } else if(nowDate.getTime() < selectedNowTime.getTime()) {
+        diffTime = Math.abs(nowDate.getTime() - selectedNowTime.getTime());
+        diffDay = Math.floor(diffTime / (24 * 3600 * 1000));
+        var temp1 = diffTime % (24 * 3600 * 1000);
+        diffHour = Math.floor(temp1 / (3600 * 1000));
+        var temp2 = temp1 % (3600 * 1000);
+        diffMinute = Math.floor(temp2 / (60 * 1000));
+        var temp3 = temp2 % (60 * 1000);
+        diffSecond = Math.floor(temp3 / 1000);
+        document.getElementById("result-wrapper").innerHTML = "现在距离" + selectVaule("year-select") + "年" + selectVaule("month-select") + "月" + selectVaule("day-select") + "日" + " " + selectVaule("hour-select") + ":" + selectVaule("minute-select") + ":" + selectVaule("second-select") + " 还有 " + diffDay + "天" + diffHour + "小时" + diffMinute + "分" + diffSecond + "秒";
+    }  
 }
 
-//计算时间差
-
 //setInterval("showTime4()", 1000);
-
-selectVaule("year-select");
